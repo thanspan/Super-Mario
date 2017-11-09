@@ -38,8 +38,8 @@ body {
 			
 			//  We need this because the assets are on github pages
 			//  Remove the next 2 lines if running locally
-			//this.load.baseURL = ' https://thanspan.github.io/Super-Mario/';
-			//this.load.crossOrigin = 'anonymous';
+			this.load.baseURL = ' https://thanspan.github.io/Super-Mario/';
+			this.load.crossOrigin = 'anonymous';
 
 			this.load.spritesheet('tiles', 'assets/super_mario_tiles.png', 16,
 					16);
@@ -128,7 +128,7 @@ body {
 				if (cursors.left.isDown) {
 					player.body.velocity.x = -90;
 					player.animations.play('walkLeft');
-					player.goesRight = true;
+					player.goesRight = false;
 				} else if (cursors.right.isDown) {
 					player.body.velocity.x = 90;
 					player.animations.play('walkRight');
