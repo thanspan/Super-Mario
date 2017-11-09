@@ -124,7 +124,7 @@ body {
 				if (cursors.left.isDown) {
 					player.body.velocity.x = -90;
 					player.animations.play('walkLeft');
-					player.goesRight = true;
+					player.goesRight = false;
 				} else if (cursors.right.isDown) {
 					player.body.velocity.x = 90;
 					player.animations.play('walkRight');
