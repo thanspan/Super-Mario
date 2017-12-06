@@ -10,10 +10,7 @@ body {
 	background-color: 	#6666cc;
 }
 </style>
-	<script src="splash.js"></script>
-        <script src="state1.js"></script>
 <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
-
 </head>
 <body>
 	<script type="text/javascript">
@@ -31,10 +28,6 @@ body {
         var livesimg;
         
 		
-		game.state.add('state1', state1);
-		game.state.add('splash',splash);
-		game.state.start('splash');
-		/**
 		function preload() {
             
             this.load.audio('pipesound','audio/pipe.wav');
@@ -173,7 +166,7 @@ body {
 						player.frame = 12;
 				}
 			}
-		} */
+		} 
 		function coinOverlap(player, coin) {
 			coinsoundkill = game.add.audio('coinsound');
 			coinsoundkill.play();
@@ -213,8 +206,7 @@ body {
     					} else {
 				setTimeout(function(){
 				alert("GAME OVER!!");
-				location.reload();
-					game.state.start('splash');
+				location.reload();	
 				}, 1000);}
                              
 				player.frame = 6;
@@ -257,7 +249,6 @@ body {
 				setTimeout(function(){
 				alert("TRY AGAIN");
 				location.reload();
-					game.state.start('state1');
 				}, 1000);}
                              
 				player.frame = 6;
