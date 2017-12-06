@@ -1,25 +1,27 @@
-var menu={
-	preload: function(){
-		game.load.image('menu',  'assets/menu.jpg');
-		game.load.image('logo', 'menu/logo.jfif');
-		game.load.image('lvl1','asstes/lvl1.png');
-	},
-	create:function(){	
-		game.scale.pageAlignHorizontally = true;
-		game.scale.pageAlignVertically = true;
-		game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-		game.physics.startSystem(Phaser.Physics.ARCADE);
-		
-		//var background=game.add.sprite(0,0,'bg');
-		//background.anchor.set(0.5,0.5);
-
-		var menu = game.add.sprite(100,70, 'logo');
-		menu.anchor.set(0.5,0.5);
-
-		var button1 = game.add.button(100 , 150, "lvl1", function(){
-			game.state.start('index');
-		});
-		button1.anchor.set(0.5, 0.5);
-
-	}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Super-Mario</title>
+<meta charset="utf-8">
+<style>																
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+	background-image: url("assets/menu.jpg");
+	background-size: 1800px 900px;
+	 
 }
+</style>
+<script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
+  <audio autoplay loop>
+  <source src="audio/menusong.mp3" type ="audio/mpeg">
+  </audio>
+</head>
+<body>
+		
+
+  <a href="https://thanspan.github.io/Super-Mario/">
+	  <center><img src="assets/lvl1.png" style="width:14%;"></center>
+	</a>
+  </body>
