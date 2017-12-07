@@ -28,10 +28,10 @@ preload: function() {
 			musicbs = game.add.audio('music');
 		    musicbs.play();
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
-			game.scale.pageAlignHorizontally = true;
+			/**game.scale.pageAlignHorizontally = true;
 			game.scale.pageAlignVertically = true
 			game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-			game.physics.startSystem(Phaser.Physics.ARCADE);
+			game.physics.startSystem(Phaser.Physics.ARCADE); */
 			game.stage.backgroundColor = 	'#5c94fc';
             pipesound = game.add.audio('pipesound');
 			
