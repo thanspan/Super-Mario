@@ -2,6 +2,7 @@ var menu = {
 	preload: function() {
 
 		game.load.image('menu', 'assets/menu.jpg');
+		game.load.image('logo', 'assets/logo.jpg');
 		game.load.image('lvl1', 'assets/lvl1.png');
 		game.load.audio('menusong', 'audio/menusong.mp3');
 		},
@@ -17,7 +18,8 @@ var menu = {
 			game.physics.startSystem(Phaser.Physics.ARCADE);
 			
 			var menuimage = game.add.sprite(8, 8, 'menu');
-
+                          
+			var menulogo = game.add.sprite(8,8,'menulogo');
 			var lvltxt = game.add.text(38, 150, 'level 1', {fontSize: '12px', fill: #fff'});
 			var click1 = game.add.button(60, 197, 'level 1', function() {
 			game.state.start('level 1');
