@@ -22,6 +22,11 @@ body {
 			update : update
 		}, false, false);
         
+		function preload(){
+		this.load.baseURL = 'https://thanspan.github.io/Super-Mario/';
+		this.load.crossOrigin = 'anonymous';
+		}	
+		
         var musicbs;
         var score=0;
         var scoretxt;
@@ -29,10 +34,7 @@ body {
         var livesco;
         var livesimg;
         
-		function preload(){
-		this.load.baseURL = 'https://thanspan.github.io/Super-Mario/';
-		this.load.crossOrigin = 'anonymous';
-		}	
+		
 		
 		
 		game.state.add('lvl1', lvl1);
