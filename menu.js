@@ -19,8 +19,8 @@ var menu = {
 			
 			var menuimage = game.add.sprite(8, 8, 'menu');
                           
-			var lvltxt1 = game.add.text(30,20, 'Super', {fontSize: '17px', fill: '#ff8'});
-			var lvltxt2 = game.add.text(45,20, ' - Mario', {fontSize: '17px', fill: '#00f'});
+			var lvltxt1 = game.add.text(10,20, 'Super', {fontSize: '17px', fill: '#E80'});
+			var lvltxt2 = game.add.text(50,20, ' - Mario', {fontSize: '17px', fill: '#00f'});
 			var lvltxt3 = game.add.text(33,35, 'Game', {fontSize: '17px', fill: '#ff0'});
 			var lvltxt = game.add.text(30, 150, 'Select level :', {fontSize: '12px', fill: '#fff'});
 			var click1 = game.add.button(60, 197, 'lvl1', function() {
