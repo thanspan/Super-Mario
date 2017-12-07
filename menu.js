@@ -19,7 +19,7 @@ var menu = {
 			
 			var menuimage = game.add.sprite(8, 8, 'menu');
                           
-			//var menulogo = game.add.sprite(2,2,'logo');
+			var menulogo = game.add.sprite(50,28'logo');
 			var lvltxt = game.add.text(30, 150, 'Select level :', {fontSize: '12px', fill: '#fff'});
 			var click1 = game.add.button(60, 197, 'lvl1', function() {
 			game.state.start('lvl1');
