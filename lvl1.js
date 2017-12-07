@@ -22,18 +22,18 @@ preload: function() {
 			this.load.spritesheet('coin', 'assets/coin.png', 16, 16);
 			this.load.tilemap('level', 'assets/super_mario_mapnew.json', null,
 					Phaser.Tilemap.TILED_JSON);
-		}
+		},
 			
-		create: function() {
-}musicbs = game.add.audio('music');
-		    musicbs.play();
+create : function(){
+                        musicbs = game.add.audio('music');
+		        musicbs.play();
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			/**game.scale.pageAlignHorizontally = true;
 			game.scale.pageAlignVertically = true
 			game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 			game.physics.startSystem(Phaser.Physics.ARCADE); */
 			game.stage.backgroundColor = 	'#5c94fc';
-            pipesound = game.add.audio('pipesound');
+                        pipesound = game.add.audio('pipesound');
 			
 			map = game.add.tilemap('level');
 			map.addTilesetImage('tiles', 'tiles');
@@ -85,7 +85,7 @@ preload: function() {
 			livesco.fixedToCamera=true;
 			livesimg.fixedToCamera=true;
 			
-		}
+		},
     update: function() {
 			game.physics.arcade.collide(player, layer);
 			game.physics.arcade.collide(goombas, layer);
