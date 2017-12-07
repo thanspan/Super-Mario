@@ -1,4 +1,4 @@
-var leve1 ={
+var lvl1 ={
 
 preload: function() {
             
