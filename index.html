@@ -10,6 +10,8 @@ body {
 	background-color: 	#6666cc;
 }
 </style>
+	<script src = "menu.js"></script>
+<script src = "level1.js"></script>
 <script src="//cdn.jsdelivr.net/phaser/2.6.2/phaser.min.js"></script>
 </head>
 <body>
@@ -27,7 +29,16 @@ body {
         var livesco;
         var livesimg;
         
+		function preload(){
+		this.load.baseURL = 'https://thanspan.github.io/Super-Mario/';
+		this.load.crossOrigin = 'anonymous';
+		}	
 		
+		
+		game.state.add('lvl1', lvl1);
+		game.state.add('menu', menu);
+		game.state.start('menu');
+		/**
 		function preload() {
             
             this.load.audio('pipesound','audio/pipe.wav');
@@ -122,11 +133,11 @@ body {
 			livesco.fixedToCamera=true;
 			livesimg.fixedToCamera=true;
 			
-		}
+		} */
 		var coinsoundkill;
         var goombask;
         var deathsk;
-        
+        /**
 		function update() {
 			game.physics.arcade.collide(player, layer);
 			game.physics.arcade.collide(goombas, layer);
@@ -174,7 +185,7 @@ body {
 		    score += 10;
     			scoretxt.text = 'Score: ' + score; 
 		       
-		}
+		} */
 		function goombaOverlap(player, goomba) {
 			
 			if (player.body.touching.down) {
