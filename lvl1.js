@@ -1,6 +1,6 @@
 var leve1 ={
 
-function preload() {
+preload: function() {
             
             this.load.audio('pipesound','audio/pipe.wav');
             this.load.audio('deathsound','audio/death.mp3');
@@ -24,7 +24,7 @@ function preload() {
 					Phaser.Tilemap.TILED_JSON);
 		}
 			
-		function create() {
+		create: function() {
 			musicbs = game.add.audio('music');
 		    musicbs.play();
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
@@ -42,7 +42,7 @@ function preload() {
 			map.createLayer('background');
            
 			layer = map.createLayer('solid');
-            layer.resizeWorld();
+                        layer.resizeWorld();
 			pipe = map.createLayer('pipe');
 			pipe.resizeWorld();
 			
@@ -86,7 +86,7 @@ function preload() {
 			livesimg.fixedToCamera=true;
 			
 		}
-    function update() {
+    update: function() {
 			game.physics.arcade.collide(player, layer);
 			game.physics.arcade.collide(goombas, layer);
 			game.physics.arcade.collide(enemy, layer);
