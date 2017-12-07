@@ -25,8 +25,8 @@ preload: function() {
 		}
 			
 		create: function() {
-			//musicbs = game.add.audio('music');
-		    //musicbs.play();
+}musicbs = game.add.audio('music');
+		    musicbs.play();
 			Phaser.Canvas.setImageRenderingCrisp(game.canvas)
 			/**game.scale.pageAlignHorizontally = true;
 			game.scale.pageAlignVertically = true
