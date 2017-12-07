@@ -18,7 +18,7 @@ var menu = {
 			
 			var menuimage = game.add.sprite(8, 8, 'menu');
 
-			var lvltxt = game.add.text(38, 150, 'level 1', {fontSize: '12px', fill: #000'});
+			var lvltxt = game.add.text(38, 150, 'level 1', {fontSize: '12px', fill: #FFF'});
 			var click1 = game.add.button(60, 197, 'level 1', function() {
 			game.state.start('lvl1');
 			menusong.stop();
