@@ -77,7 +77,8 @@ body {
     		    		game.state.start(game.state.current);
     		   		 }, 2500);
     					} else {
-				game.state.start('Gameover');
+				setTimeout(function(){
+				game.state.start('gameover');
 				location.reload();	
 				}, 1000);}
                              
