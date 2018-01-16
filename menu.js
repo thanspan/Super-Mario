@@ -23,7 +23,7 @@ var menu = {
 			var lvltxt2 = game.add.text(65,20, ' - Mario', {fontSize: '20px', fill: '#00f'});
 			var lvltxt3 = game.add.text(35,38, 'Game', {fontSize: '20px', fill: '#ff0'});
 			var lvltxt = game.add.text(30, 150, 'Select level :', {fontSize: '12px', fill: '#fff'});
-			var click1 = game.add.button(60, 197, 'lvl1', function() {
+			var click1 = game.add.button(40, 190, 'lvl1', function() {
 			game.state.start('lvl1');
 			menusong.stop();
 		});
