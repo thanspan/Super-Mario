@@ -9,8 +9,8 @@ preload: function() {
 			this.load.audio('coinsound','audio/coin.wav');
 			this.load.audio('doorsound','audio/stomp.wav');
 			
-			We need this because the assets are on github pages
-			Remove the next 2 lines if running locally
+			//We need this because the assets are on github pages
+			//Remove the next 2 lines if running locally
 			this.load.baseURL = ' https://thanspan.github.io/Super-Mario/';
 			this.load.crossOrigin = 'anonymous';
 		    this.load.image('live','assets/images.png');
