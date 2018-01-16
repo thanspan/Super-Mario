@@ -79,12 +79,12 @@ body {
     					} else {
 				setTimeout(function(){
 				game.state.start('gameover');	
-				}, 2000);}
+				}, 2500);}
                              
 				player.frame = 6;
 				player.body.enable = false;
 				player.animations.stop();
-				game.time.events.add(Phaser.Timer.SECOND * 3, function() {
+				game.time.events.add(Phaser.Timer.SECOND * 5, function() {
 					game.paused = true;
 				});
 			}
@@ -120,12 +120,12 @@ body {
     					} else {
 				setTimeout(function(){
 				game.state.start('gameover');
-				}, 2000);}
+				}, 2500);}
                              
 				player.frame = 6;
 				player.body.enable = false;
 				player.animations.stop();
-				game.time.events.add(Phaser.Timer.SECOND * 3, function() {
+				game.time.events.add(Phaser.Timer.SECOND * 5, function() {
 					game.paused = true;
 				});
 			}
