@@ -1,7 +1,7 @@
 var gameover = {
 
 	preload: function(){
-		game.load.audio('gameovs', 'audio/gameovsou.mp3');
+		game.load.audio('gameovs', 'audio/gameovsound.mp3');
 	},
 
 	create: function(){
