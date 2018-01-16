@@ -3,7 +3,7 @@ var menu = {
 
 		game.load.image('menu', 'assets/menu.jpg');
 		game.load.image('logo', 'assets/logo.jpg');
-		game.load.image('lvl1', 'assets/lvl1.png');
+		game.load.image('lvl1', 'assets/lvl1.jpg');
 		game.load.audio('menusong', 'audio/menusong.mp3');
 		},
 		
