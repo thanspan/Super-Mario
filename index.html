@@ -120,7 +120,7 @@ body {
     		   		 }, 2500);
     					} else {
 				setTimeout(function(){
-				alert("TRY AGAIN");
+				game.state.start('gameover');
 				location.reload();
 				}, 1000);}
                              
