@@ -16,7 +16,7 @@ var gameover = {
     var gameovertxt = game.add.text(50,100, '!!TRY AGAIN!!', {fontSize: '25px', fill: '#fff'});
 		game.time.events.add(Phaser.Timer.SECOND * 5, function(){
 			score = 0;
-			game.state.start('Menu');
+			game.state.start('menu');
 		});
 	}
 }
