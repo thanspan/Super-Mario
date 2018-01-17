@@ -71,9 +71,9 @@ create : function(){
 			enemy.setAll('body.bounce.x', 1);
 			enemy.setAll('body.velocity.x', -20);
 			enemy.setAll('body.gravity.y', 500);
-	
+	game.physics.arcade.enable(player);
 	                player = game.add.sprite(16, game.world.height - 48, 'mario');
-			game.physics.arcade.enable(player);
+			
 			player.body.gravity.y = 370;
 			player.body.collideWorldBounds = true;
 			player.animations.add('walkRight', [ 1, 2, 3 ], 10, true);
