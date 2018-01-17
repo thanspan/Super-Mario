@@ -41,7 +41,7 @@ create : function(){
 			layer = map.createLayer('solid');
                         layer.resizeWorld();
 			pipe = map.createLayer('pipe');
-			pipe.resizeWorld();
+			//pipe.resizeWorld();
 			
 			coins = game.add.group();
 			coins.enableBody = true;
@@ -79,7 +79,7 @@ create : function(){
 			player.animations.add('walkRight', [ 1, 2, 3 ], 10, true);
 			player.animations.add('walkLeft', [ 8, 9, 10 ], 10, true);
 			player.goesRight = true;
-			  game.physics.arcade.enable(player);
+			 
 	                 game.camera.follow(player);
 			 scoretxt = game.add.text(16, 16, 'Score: 0', { fontSize: '10px', fill: '#000' });
                          scoretxt.fixedToCamera = true;
@@ -104,7 +104,7 @@ create : function(){
 			game.physics.arcade.overlap(player, coins, coinOverlap);
 			game.physics.arcade.overlap(player,enemy, enemyOverlap);
 	                game.physics.arcade.collide(player,door,doorcollide);
-			
+			 game.physics.arcade.enable(player);
 	  
 	                if (player.body.enable) {
 				player.body.velocity.x = 0;
