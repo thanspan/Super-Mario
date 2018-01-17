@@ -98,7 +98,7 @@ create : function(){
 			game.physics.arcade.overlap(player, goombas, goombaOverlap);
 			game.physics.arcade.overlap(player, coins, coinOverlap);
 			game.physics.arcade.overlap(player,enemy, enemyOverlap);
-	                game.physics.arcade.collide(player,door, doorcollide);
+	                game.physics.arcade.collide(player, layer);
 			
 	                if (player.body.enable) {
 				player.body.velocity.x = 0;
