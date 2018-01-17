@@ -13,16 +13,16 @@ preload: function() {
 			//Remove the next 2 lines if running locally
 			this.load.baseURL = ' https://thanspan.github.io/Super-Mario/';
 			this.load.crossOrigin = 'anonymous';
-		    this.load.image('live','assets/images.png');
-			this.load.spritesheet('tiles', 'assets/super_mario_tiles.png', 16,
-					16);
+		        this.load.image('live','assets/images.png');
+		        this.load.spritesheet('tiles', 'assets/super_mario_tiles.png', 16,16);
 			this.load.spritesheet('goomba', 'assets/goomba.png', 16, 16);
 			this.load.spritesheet('enemy', 'assets/enemyb.png', 16, 16);
 			this.load.spritesheet('mario', 'assets/mario.png', 16, 16);
 			this.load.spritesheet('coin', 'assets/coin.png', 16, 16);
+	                this.load.image('door', 'assets/door.png',16,16);
 			this.load.tilemap('level', 'assets/super_mario_mapnew.json', null,
 					Phaser.Tilemap.TILED_JSON);
-		},
+		        },
 			
 create : function(){
                         musicbs = game.add.audio('music');
@@ -58,6 +58,11 @@ create : function(){
 			goombas.setAll('body.bounce.x', 1);
 			goombas.setAll('body.velocity.x', -20);
 			goombas.setAll('body.gravity.y', 500);
+	
+	                door = game.add.group();
+		        door.enableBody = true;
+		        map.createFromTiles(3, null, 'door', 'solid', door);
+	
 			enemy = game.add.group();
 			enemy.enableBody = true;
 			map.createFromTiles(1, null, 'enemy', 'enemy', enemy);
@@ -66,19 +71,21 @@ create : function(){
 			enemy.setAll('body.bounce.x', 1);
 			enemy.setAll('body.velocity.x', -20);
 			enemy.setAll('body.gravity.y', 500);
-			player = game.add.sprite(16, game.world.height - 48, 'mario');
+	
+	                player = game.add.sprite(16, game.world.height - 48, 'mario');
 			game.physics.arcade.enable(player);
 			player.body.gravity.y = 370;
 			player.body.collideWorldBounds = true;
 			player.animations.add('walkRight', [ 1, 2, 3 ], 10, true);
 			player.animations.add('walkLeft', [ 8, 9, 10 ], 10, true);
 			player.goesRight = true;
-			game.camera.follow(player);
+			
+	                 game.camera.follow(player);
 			 scoretxt = game.add.text(16, 16, 'Score: 0', { fontSize: '10px', fill: '#000' });
-            scoretxt.fixedToCamera = true;
+                         scoretxt.fixedToCamera = true;
 			cursors = game.input.keyboard.createCursorKeys();
-            livesimg=game.add.sprite(140,15,'live');
-            livesco=game.add.text(158,20,'x '+lives,{font:'30px',fontSize: '10px',  fill:'black'});
+                        livesimg=game.add.sprite(140,15,'live');
+                        livesco=game.add.text(158,20,'x '+lives,{font:'30px',fontSize: '10px',  fill:'black'});
 			livesco.fixedToCamera=true;
 			livesimg.fixedToCamera=true;
 			
@@ -91,7 +98,9 @@ create : function(){
 			game.physics.arcade.overlap(player, goombas, goombaOverlap);
 			game.physics.arcade.overlap(player, coins, coinOverlap);
 			game.physics.arcade.overlap(player,enemy, enemyOverlap);
-			if (player.body.enable) {
+	                game.physics.arcade.collide(player,door, door1collide);
+			
+	                if (player.body.enable) {
 				player.body.velocity.x = 0;
 				if (cursors.left.isDown) {
 					player.body.velocity.x = -90;
