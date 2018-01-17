@@ -79,7 +79,9 @@ create : function(){
 			player.animations.add('walkRight', [ 1, 2, 3 ], 10, true);
 			player.animations.add('walkLeft', [ 8, 9, 10 ], 10, true);
 			player.goesRight = true;
-			
+			  player.body.enable = true;
+			player.animations.play();
+	    
 	                 game.camera.follow(player);
 			 scoretxt = game.add.text(16, 16, 'Score: 0', { fontSize: '10px', fill: '#000' });
                          scoretxt.fixedToCamera = true;
@@ -105,9 +107,7 @@ create : function(){
 			game.physics.arcade.overlap(player,enemy, enemyOverlap);
 	                game.physics.arcade.collide(player,door,doorcollide);
 			
-	    player.body.enable = true;
-			player.animations.play();
-	    
+	  
 	                if (player.body.enable) {
 				player.body.velocity.x = 0;
 				if (cursors.left.isDown) {
