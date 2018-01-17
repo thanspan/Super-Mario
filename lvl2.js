@@ -88,6 +88,11 @@ create : function(){
                         livesco=game.add.text(158,20,'x '+lives,{font:'30px',fontSize: '10px',  fill:'black'});
 			livesco.fixedToCamera=true;
 			livesimg.fixedToCamera=true;
+	
+	var style5 = { font: "bold 80px Roman", fill: "#4bb84b", boundsAlignH: "center", boundsAlignV: "middle" };
+		var	lvltext = game.add.text(280, 100, "CONGRATULATIONS", style5);
+		var	lvltext = game.add.text(280, 150, "NEXT STAGE", style5);
+			
 			
 		},
     update: function() {
