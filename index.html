@@ -141,7 +141,7 @@ body {
 	}
 }
 		function nextstage(){
-			/** //lvl = game.add.audio('lvl');
+		        //lvl = game.add.audio('lvl');
 			
 			
 			var style5 = { font: "bold 80px Roman", fill: "#4bb84b", boundsAlignH: "center", boundsAlignV: "middle" };
@@ -154,8 +154,8 @@ body {
 			player.animations.stop();
 			game.time.events.add(Phaser.Timer.SECOND * 5, function() {
 			//game.state.start('S2');
-			}); */
-			game.paused = true;
+			}); 
+			//game.paused = true;
 		}
 		
 		function doorcollide(player, door){
@@ -167,12 +167,14 @@ body {
 				nextstage();
 			}else if (player.body.touching.left){
 				door.body.enable = false;
-				nextstage();
+			        nextstage();
+				
 			}else
 				door.body.enable = false;
 				nextstage();
 		}
-
+		}
+		}
 	</script>
 	</body>
 </html>
