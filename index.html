@@ -41,7 +41,7 @@ body {
         var goombask;
         var deathsk;
 		
-		function nextstage(){
+		/**function nextstage(){
 		        //lvl = game.add.audio('lvl');
 			
 			
@@ -57,7 +57,7 @@ body {
 			//game.state.start('S2');
 			}); 
 			game.paused = true;
-		}
+		} */
         
 		function coinOverlap(player, coin) {
 			coinsoundkill = game.add.audio('coinsound');
@@ -163,17 +163,20 @@ body {
 		function doorOverlap(player, door){
 			if (player.body.touching.up){
 				door.body.enable = false;
-				nextsatge();
+				//nextsatge();
+				game.paused = true;
 			}else if (player.body.touching.right){
 				door.body.enable = false;
-				nextstage();
+				//nextstage();
+				game.paused = true;
 			}else if (player.body.touching.left){
 				door.body.enable = false;
-			        nextstage();
-				
+			       // nextstage();
+				game.paused = true;
 			}else
 				door.body.enable = false;
-				nextstage();
+				//nextstage();
+			game.paused = true;
 		}
 		
 		
