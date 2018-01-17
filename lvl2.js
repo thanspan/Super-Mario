@@ -20,7 +20,7 @@ preload: function() {
 			this.load.spritesheet('mario', 'assets/mario.png', 16, 16);
 			this.load.spritesheet('coin', 'assets/coin.png', 16, 16);
 	                this.load.image('door', 'assets/door.png',16,16);
-			this.load.tilemap('level', 'assets/newmap.json', null,
+			this.load.tilemap('level', 'assets/super_mario_map.json', null,
 					Phaser.Tilemap.TILED_JSON);
 		        },
 			
