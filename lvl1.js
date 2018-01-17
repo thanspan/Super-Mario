@@ -61,7 +61,7 @@ create : function(){
 	
 	                door = game.add.group();
 		        door.enableBody = true;
-		        map.createFromTiles(3, null, 'door', 'solid', door);
+		        map.createFromTiles(3, null, 'door', 'stuff', door);
 	
 			enemy = game.add.group();
 			enemy.enableBody = true;
