@@ -140,7 +140,7 @@ body {
 					});
 	}
 }
-		function doorcollide(player,door){
+		function nextstage(){
 			//lvl = game.add.audio('lvl');
 			
 			
@@ -156,6 +156,22 @@ body {
 			//game.state.start('S2');
 			});
 		}
-	</script>
+		
+		function doorcollide(player, door){
+			if (player.body.touching.up){
+				door.body.enable = false;
+				nextsatge();
+			}else if (player.body.touching.right){
+				door1.body.enable = false;
+				nextstage();
+			}else if (player.body.touching.left){
+				door.body.enable = false;
+				nextstage();
+			}else
+				door.body.enable = false;
+				nextstage();
+		}
 </body>
+	</script>
+	
 </html>
