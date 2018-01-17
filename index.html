@@ -23,7 +23,7 @@ body {
 		this.load.crossOrigin = 'anonymous';
 		}	
 		
-        var lvltext;
+       // var lvltext;
         var musicbs;
         var score=0;
         var scoretxt;
@@ -45,10 +45,11 @@ body {
 		        //lvl = game.add.audio('lvl');
 			
 			
-			var style5 = { font: "bold 80px Roman", fill: "#4bb84b", boundsAlignH: "center", boundsAlignV: "middle" };
-			lvltext = game.add.text(280, 100, "CONGRATULATIONS", style5);
-			lvltext = game.add.text(280, 150, "NEXT STAGE", style5);
-			lvltext.fixedToCamera = true;
+			//var style5 = { font: "bold 80px Roman", fill: "#4bb84b", boundsAlignH: "center", boundsAlignV: "middle" };
+			//lvltext = game.add.text(280, 100, "CONGRATULATIONS", style5);
+			//lvltext = game.add.text(280, 150, "NEXT STAGE", style5);
+			var lvltxt1 = game.add.text(10,20, 'Super', {fontSize: '20px', fill: '#E00'});
+			//lvltext.fixedToCamera = true;
 			musicbs.stop();
 			//lvl.play();
 			player.body.enable = false;
