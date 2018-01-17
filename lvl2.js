@@ -105,6 +105,9 @@ create : function(){
 			game.physics.arcade.overlap(player,enemy, enemyOverlap);
 	                game.physics.arcade.collide(player,door,doorcollide);
 			
+	    player.body.enable = true;
+			player.animations.play();
+	    
 	                if (player.body.enable) {
 				player.body.velocity.x = 0;
 				if (cursors.left.isDown) {
