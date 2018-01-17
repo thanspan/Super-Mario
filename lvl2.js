@@ -35,7 +35,7 @@ create : function(){
 			map = game.add.tilemap('level');
 			map.addTilesetImage('tiles', 'tiles');
 			map.setCollisionBetween(3, 12, true, 'solid');
-			map.setCollisionBetween(3, 12, true, 'pipe');
+			//map.setCollisionBetween(3, 12, true, 'pipe');
 			map.createLayer('background');
            
 			layer = map.createLayer('solid');
@@ -79,9 +79,7 @@ create : function(){
 			player.animations.add('walkRight', [ 1, 2, 3 ], 10, true);
 			player.animations.add('walkLeft', [ 8, 9, 10 ], 10, true);
 			player.goesRight = true;
-			  player.body.enable = true;
-			player.animations.play();
-	    
+			  game.physics.arcade.enable(player);
 	                 game.camera.follow(player);
 			 scoretxt = game.add.text(16, 16, 'Score: 0', { fontSize: '10px', fill: '#000' });
                          scoretxt.fixedToCamera = true;
