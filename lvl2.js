@@ -65,7 +65,7 @@ create : function(){
 	
 			enemy = game.add.group();
 			enemy.enableBody = true;
-			map.createFromTiles(1, null, 'enemy', 'enemy', enemy);
+			//map.createFromTiles(1, null, 'enemy', 'enemy', enemy);
 			enemy.callAll('animations.add', 'animations', 'walk', [ 0, 1 ],2, true);
 			enemy.callAll('animations.play', 'animations', 'walk');
 			enemy.setAll('body.bounce.x', 1);
