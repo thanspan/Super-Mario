@@ -37,7 +37,7 @@ create : function(){
 			map = game.add.tilemap('level');
 			map.addTilesetImage('super_mario_tiles1', 'tiles');
 			map.setCollisionBetween(3, 12, true, 'solid');
-			//map.setCollisionBetween(3, 12, true, 'pipe');
+			map.setCollisionBetween(3, 12, true, 'pipe');
 			map.createLayer('background');
            
 			layer = map.createLayer('solid');
@@ -93,7 +93,7 @@ create : function(){
 			livesco.fixedToCamera=true;
 			livesimg.fixedToCamera=true;
 	
-	    var style5 = { font: "bold 20 Roman", fill: "#4bb84b", boundsAlignH: "center", boundsAlignV: "middle" };
+	    var style5 = { font: "bold 20 Roman", fill: "000", boundsAlignH: "center", boundsAlignV: "middle" };
 		var	lvltext = game.add.text(100, 60, "CONGRATULATIONS", style5);
 		var	lvltext = game.add.text(100, 80, "NEXT STAGE", style5);
 			
