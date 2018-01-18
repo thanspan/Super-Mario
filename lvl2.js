@@ -37,7 +37,7 @@ create : function(){
 			map = game.add.tilemap('level');
 			map.addTilesetImage('super_mario_tiles1', 'tiles');
 			map.setCollisionBetween(3, 12, true, 'solid');
-			map.setCollisionBetween(3, 12, true, 'pipe');
+			//map.setCollisionBetween(3, 12, true, 'pipe');
 			map.createLayer('background');
            
 			layer = map.createLayer('solid');
@@ -74,7 +74,7 @@ create : function(){
 			enemy.setAll('body.velocity.x', -20);
 			enemy.setAll('body.gravity.y', 500);
 
-	        //game.physics.arcade.enable(player);
+	        
 	        player = game.add.sprite(16, game.world.height - 48, 'mario');
 			game.physics.arcade.enable(player);
 			player.body.gravity.y = 370;
