@@ -14,13 +14,13 @@ preload: function() {
 			this.load.baseURL = ' https://thanspan.github.io/Super-Mario/';
 			this.load.crossOrigin = 'anonymous';
 		        this.load.image('live','assets/images.png');
-		        this.load.spritesheet('tiles', 'assets/super_mario_tiles.png', 16,16);
-			this.load.spritesheet('goomba', 'assets/goomba.png', 16, 16);
+		        this.load.spritesheet('tiles', 'assets/super_mario_tiles1.png', 16,16);
+			this.load.spritesheet('goomba', 'assets/goomba1.png', 16, 16);
 			this.load.spritesheet('enemy', 'assets/enemyb.png', 16, 16);
 			this.load.spritesheet('mario', 'assets/mario.png', 16, 16);
-			this.load.spritesheet('coin', 'assets/coin.png', 16, 16);
+			this.load.spritesheet('coin', 'assets/coin1.png', 16, 16);
 	                this.load.image('door', 'assets/door.png',16,16);
-			this.load.tilemap('level', 'assets/super_mario_map.json', null,
+			this.load.tilemap('level', 'assets/super_mario_map2.json', null,
 					Phaser.Tilemap.TILED_JSON);
 		        },
 			
