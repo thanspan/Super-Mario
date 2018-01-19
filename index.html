@@ -73,7 +73,9 @@ body {
 			musicbs.stop();
 			
 			player.body.enable = false;
-			
+			game.time.events.add(Phaser.Timer.SECOND * 3, function() {
+			game.state.start('menu');
+			});
 		} 
         
 		function coinOverlap(player, coin) {
