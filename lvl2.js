@@ -6,6 +6,7 @@ preload: function() {
             this.load.audio('deathsound','audio/death.mp3');
             this.load.audio('jumpsound','audio/jump.wav');
             this.load.audio('music','audio/xasma.mp3');
+	 this.load.audio('win','audio/win.mp3');
 			this.load.audio('coinsound','audio/coin.wav');
 			this.load.audio('doorsound','audio/stomp.wav');
 			
