@@ -37,13 +37,13 @@ create : function(){
 			map = game.add.tilemap('level');
 			map.addTilesetImage('tiles', 'tiles');
 			map.setCollisionBetween(3, 12, true, 'solid');
-			//map.setCollisionBetween(3, 12, true, 'pipe');
+			map.setCollisionBetween(3, 12, true, 'pipe');
 			map.createLayer('background');
            
 			layer = map.createLayer('solid');
             layer.resizeWorld();
 			pipe = map.createLayer('pipe');
-			//pipe.resizeWorld();
+			pipe.resizeWorld();
 			
 			coins = game.add.group();
 			coins.enableBody = true;
@@ -65,14 +65,14 @@ create : function(){
 		    door.enableBody = true;
 		    map.createFromTiles(3, null, 'door', 'stuff', door);
 	
-			/**enemy = game.add.group();
+			enemy = game.add.group();
 			enemy.enableBody = true;
-			//map.createFromTiles(1, null, 'enemy', 'enemy', enemy);
+			map.createFromTiles(1, null, 'enemy', 'enemy', enemy);
 			enemy.callAll('animations.add', 'animations', 'walk', [ 0, 1 ],2, true);
 			enemy.callAll('animations.play', 'animations', 'walk');
 			enemy.setAll('body.bounce.x', 1);
 			enemy.setAll('body.velocity.x', -20);
-			enemy.setAll('body.gravity.y', 500); */
+			enemy.setAll('body.gravity.y', 500); 
 
 	        
 	        player = game.add.sprite(16, game.world.height - 48, 'mario');
@@ -102,11 +102,11 @@ create : function(){
     update: function() {
 			game.physics.arcade.collide(player, layer);
 			game.physics.arcade.collide(goombas, layer);
-			//game.physics.arcade.collide(enemy, layer);
-			//game.physics.arcade.collide(player,pipe,pipeOverlap);
+			game.physics.arcade.collide(enemy, layer);
+			game.physics.arcade.collide(player,pipe,pipeOverlap);
 			game.physics.arcade.overlap(player, goombas, goombaOverlap);
 			game.physics.arcade.overlap(player, coins, coinOverlap);
-			//game.physics.arcade.overlap(player,enemy, enemyOverlap);
+			game.physics.arcade.overlap(player,enemy, enemyOverlap);
 	        game.physics.arcade.collide(player,door,doorcollide);
 		    game.physics.arcade.enable(player);
 	  
