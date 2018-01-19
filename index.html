@@ -65,6 +65,7 @@ body {
 		
 		function end(){
 		       
+			win = gme.add.audio('win');
 			
 			
 			  var style5 = { font: "bold 30 Roman", fill: "000", boundsAlignH: "center", boundsAlignV: "middle" };
@@ -72,7 +73,7 @@ body {
 		          	lvltext2 = game.add.text(100, 80, "!!YOU WIN!!", style5);
 			  lvltext2.fixedToCamera = true;
 			musicbs.stop();
-			
+			win.play();
 			player.body.enable = false;
 			game.time.events.add(Phaser.Timer.SECOND * 3, function() {
 			game.state.start('menu');
