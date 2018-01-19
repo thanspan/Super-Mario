@@ -93,10 +93,7 @@ create : function(){
 			livesco.fixedToCamera=true;
 			livesimg.fixedToCamera=true;
 	
-	    var style5 = { font: "bold 20 Roman", fill: "000", boundsAlignH: "center", boundsAlignV: "middle" };
-		var	lvltext = game.add.text(100, 60, "CONGRATULATIONS", style5);
-		var	lvltext = game.add.text(100, 80, "NEXT STAGE", style5);
-			
+	  
 			
 		},
     update: function() {
