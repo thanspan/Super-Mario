@@ -25,6 +25,7 @@ body {
 		}	
 		
        var lvltext;
+		var lvltext2;
         var musicbs;
         var score=0;
         var scoretxt;
@@ -67,9 +68,9 @@ body {
 			
 			
 			  var style5 = { font: "bold 30 Roman", fill: "000", boundsAlignH: "center", boundsAlignV: "middle" };
-		          var	lvltext = game.add.text(100, 60, "!!CONGRATULATIONS!!", style5);
-		          var	lvltext = game.add.text(100, 80, "!!YOU WIN!!", style5);
-			
+		         	lvltext2 = game.add.text(100, 60, "!!CONGRATULATIONS!!", style5);
+		          	lvltext2 = game.add.text(100, 80, "!!YOU WIN!!", style5);
+			  lvltext2.fixedToCamera = true;
 			musicbs.stop();
 			
 			player.body.enable = false;
