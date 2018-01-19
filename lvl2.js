@@ -102,11 +102,11 @@ create : function(){
     update: function() {
 			game.physics.arcade.collide(player, layer);
 			game.physics.arcade.collide(goombas, layer);
-			game.physics.arcade.collide(enemy, layer);
-			game.physics.arcade.collide(player,pipe,pipeOverlap);
+			//game.physics.arcade.collide(enemy, layer);
+			//game.physics.arcade.collide(player,pipe,pipeOverlap);
 			game.physics.arcade.overlap(player, goombas, goombaOverlap);
 			game.physics.arcade.overlap(player, coins, coinOverlap);
-			game.physics.arcade.overlap(player,enemy, enemyOverlap);
+			//game.physics.arcade.overlap(player,enemy, enemyOverlap);
 	        game.physics.arcade.collide(player,door,doorcollide);
 		    game.physics.arcade.enable(player);
 	  
