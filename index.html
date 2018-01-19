@@ -60,6 +60,21 @@ body {
 			});
 			
 		} 
+		
+		
+		function end(){
+		       
+			
+			
+			  var style5 = { font: "bold 30 Roman", fill: "000", boundsAlignH: "center", boundsAlignV: "middle" };
+		          var	lvltext = game.add.text(100, 60, "!!CONGRATULATIONS!!", style5);
+		          var	lvltext = game.add.text(100, 80, "!!YOU WIN!!", style5);
+			
+			musicbs.stop();
+			
+			player.body.enable = false;
+			
+		} 
         
 		function coinOverlap(player, coin) {
 			coinsoundkill = game.add.audio('coinsound');
@@ -175,6 +190,20 @@ body {
 			}else
 				door.body.enable = false;
 				nextstage();
+		}
+		function door2collide(player, door2){
+			if (player.body.touching.up){
+				door2.body.enable = false;
+				end();	
+			}else if (player.body.touching.right){
+				door2.body.enable = false;
+			       end();	
+			}else if (player.body.touching.left){
+				door2.body.enable = false;
+			      end();	
+			}else
+				door2.body.enable = false;
+				end();
 		}
 		
 		
